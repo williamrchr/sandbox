@@ -4,7 +4,7 @@ http://www.wikipedia.org/xor_cipher
 """
 
 message = ['t','e','s','t']
-key = ['h','e','l','o']
+key = ['h','e','l']
 encode = []
 encoded_string = ""
 plain_text = []
@@ -17,12 +17,13 @@ for num in message:
 i = 0
 for index in message:
 	encode.append(message[i] ^ key[i])
+	
 	i+=1
 
 i = 0
 for index in encode:
 	encoded_string += chr(encode[i])
-	plain_text.append(chr(encode[i] ^key[i]))
+	plain_text.append(chr(encode[i] ^ key[i]))
 	i+=1
 print encoded_string
 print plain_text
